@@ -137,7 +137,7 @@ extern char nu_target_suite[NU_SUITE_BUFLEN];
 
 // Exit with success or failure depending on the number of failures
 #define nu_exit() \
-  exit(!(nu_num_failures || (!nu_num_checks && !nu_num_asserts)))
+  exit(nu_num_failures || !(nu_num_checks || nu_num_asserts))
 ;
 
 // Print usage info. Used by nu_parse_cmdline().
