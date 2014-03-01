@@ -131,8 +131,8 @@ extern char nu_target_suite[NU_SUITE_BUFLEN];
   do { \
     printf("%i checks, %i asserts, %i failures, %i not implemented\n", \
       nu_num_checks, nu_num_asserts, nu_num_failures, nu_num_not_impl); \
-    int failure = (nu_num_failures || (!nu_num_checks && !nu_num_asserts)); \
-    printf(failure ? "FAILURE\n" : "SUCCESS\n"); \
+    int failure = (nu_num_failures || !(nu_num_checks || nu_num_asserts)); \
+    printf(failure ? "\e[31mFAILURE\e[0m\n" : "\e[32mSUCCESS\e[0m\n"); \
   } while(0)
 
 // Exit with success or failure depending on the number of failures
