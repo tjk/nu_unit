@@ -103,9 +103,9 @@ extern char nu_target_suite[NU_SUITE_BUFLEN];
   } while(0)
 
 // Run a test
-#define nu_run_test(func, name) \
+#define nu_run_test(func) \
   do { \
-    if(nu_output_level == NU_TEST_OUTPUT) printf("test: %s\n", name); \
+    if(nu_output_level == NU_TEST_OUTPUT) printf("test: %s\n", #func); \
     func(); \
   } while(0)
 

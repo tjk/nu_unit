@@ -39,13 +39,13 @@ void test_cake() {
 // Test suites
 //==============================================================================
 void test_suite1() {
-  nu_run_test(test_foo,      "foo");
-  nu_run_test(test_not_impl, "procrastination");
+  nu_run_test(test_foo);
+  nu_run_test(test_not_impl);
 }
 
 void test_suite2() {
-  nu_run_test(test_math_skills, "math skills");
-  nu_run_test(test_cake,        "cake");
+  nu_run_test(test_math_skills);
+  nu_run_test(test_cake);
 }
 
 //==============================================================================
